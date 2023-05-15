@@ -78,7 +78,7 @@ document.getElementById('pdf-form').addEventListener('submit', async event => {
         const differences = Diff.diffWords(text1[i], text2[i]);
         if (differences.length !== 1 || differences[0].added || differences[0].removed) {
             identical = false;
-            resultHTML += `<li class="list-group-item"><h5>Página ${i + 1}</h5></li>`;
+            resultHTML += `<li class="list-group-item"><h5 class="text-primary">Página ${i + 1}</h5></li>`;
             differences.forEach(part => {
                 if (part.added || part.removed) {
                     const label = part.added ? 'Texto novo' : 'Texto antigo';
